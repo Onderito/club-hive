@@ -77,7 +77,7 @@ export default function HeroSection() {
       <section className="mt-28">
         <div className="flex flex-col gap-6 md:flex-row md:gap-8">
           {/* Card Clubs */}
-          <Card size="md" className="flex-1">
+          <Card size="md" className="relative overflow-hidden">
             <div className="flex flex-col space-y-4">
               {clubs.map((club) => (
                 <div key={club.name} className="flex items-center gap-3">
@@ -97,8 +97,8 @@ export default function HeroSection() {
           </Card>
 
           {/* Card Dialogue */}
-          <Card size="md" className="flex-1">
-            <div className="flex flex-col space-y-14">
+          <Card size="md" className="py-10 relative overflow-hidden">
+            <div className="flex flex-col space-y-14 relative z-50">
               {messages.map((coach) => (
                 <div key={coach.name} className="flex items-start gap-3">
                   <Image
@@ -120,6 +120,83 @@ export default function HeroSection() {
                   </div>
                 </div>
               ))}
+            </div>
+            <Image
+              src={"/little-blur.svg"}
+              alt="Blur"
+              width={500}
+              height={500}
+              className="absolute top-0 left-[-150px] z-0"
+            />
+          </Card>
+
+          {/* Card Calendar */}
+          <Card
+            size="md"
+            className="flex items-center justify-center py-10 relative overflow-hidden"
+          >
+            <div className="font-montserrat space-y-2 text-lg">
+              <p className="text-white text-left bg-[var(--color-secondary)]/20 p-3 rounded-2xl shadow-inner-both">
+                📅 Next Match : Sunday 11am
+              </p>
+              <p className="text-white text-left">
+                🧾 5 new player registrations
+              </p>
+              <p className="text-white text-left">🏟️ Field : Stade Camille</p>
+              <p className="text-white text-left">📥 2 pending requests</p>
+            </div>
+            <Image
+              src={"/little-ellipse-blur.svg"}
+              alt="Blur"
+              width={300}
+              height={300}
+              className="absolute bottom-[-150px] right-[-120px]"
+            />
+          </Card>
+
+          {/* Card Stats */}
+          <Card className="relative">
+            <div>
+              <h2 className="text-white text-center font-montserrat font-bold text-[20px]">
+                Rapid FC vs Mérignac
+              </h2>
+              <div className="grid grid-cols-3 gap-2 mt-4 items-center">
+                <p className="text-white text-center font-shantell">55%</p>
+                <h3 className="text-[#909090] text-center font-montserrat">
+                  Possession
+                </h3>
+                <p className="text-white text-center font-shantell">45%</p>
+              </div>
+              <div className="grid grid-cols-3 gap-2 mt-4 items-center">
+                <p className="text-white text-center font-shantell">12</p>
+                <h3 className="text-[#909090] text-center font-montserrat">
+                  Shots
+                </h3>
+                <p className="text-white text-center font-shantell">4</p>
+              </div>
+              <div className="grid grid-cols-3 gap-2 mt-4 items-center border-b border-[#333333] pb-4">
+                <p className="text-white text-center font-shantell">455</p>
+                <h3 className="text-[#909090] text-center font-montserrat">
+                  Pass
+                </h3>
+                <p className="text-white text-center font-shantell">200</p>
+              </div>
+              <div className="grid grid-cols-3 gap-2 mt-4 items-center font-shantell font-bold text-[28px] ">
+                <p className="text-white text-center">4</p>
+                <div className="flex justify-center">
+                  <div className="w-8 h-px bg-[#333333]" />
+                </div>
+                <p className="text-white text-center">1</p>
+              </div>
+            </div>
+            <div className="flex justify-center items-center border border-white bg-[#181818] px-2 py-1 gap-3 rounded-xl w-fit absolute top-[-15px] -rotate-6 left-0">
+              <Image
+                src="/on-stream.svg"
+                alt="On Stream"
+                width={25}
+                height={25}
+              />
+              <p className="text-white font-extralight">Live</p>
             </div>
           </Card>
         </div>
