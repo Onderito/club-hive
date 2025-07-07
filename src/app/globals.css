@@ -1,8 +1,19 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../app/assets/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Shantell Sans;
+  src: url(../app/assets/ShantellSans-Light.ttf);
+}
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #181818;
+  --foreground: #181818;
+  --color-primary: #181818;
+  --color-secondary: #585bff;
 }
 
 @theme inline {
@@ -10,12 +21,26 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-shantell: "Shantell Sans", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+}
+
+@layer utilities {
+  .shadow-inner-both {
+    box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.25),
+      inset 0px 1px 1px rgba(255, 255, 255, 0.25);
+  }
+  .shadow-inner-dark {
+    box-shadow: inset 0px 4px 4px rgba(112, 112, 112, 0.25);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--background);
+    --foreground: var(--foreground);
   }
 }
 
