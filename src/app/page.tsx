@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       {/* Contenu Héro */}
-      <section className="container mx-auto px-2 py-16 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
+      <section className="container mx-auto px-2 py-28 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
         <HeroSection />
       </section>
     </>
