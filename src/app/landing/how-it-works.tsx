@@ -1,6 +1,30 @@
 import React from "react";
 import Image from "next/image";
 import Card from "../ui/card";
+import StepCardContentOne from "../components/how-it-works/step-card-content-one";
+import StepCardContentTwo from "../components/how-it-works/step-card-content-two";
+import StepCardContentThree from "../components/how-it-works/step-card-content-three";
+
+const stepCards = [
+  {
+    title: "Set Up Your Club in Minutes",
+    number: "1",
+    descripion:
+      "Quickly create your club profile, add essential details, and customize your settings to get started without delay.",
+  },
+  {
+    title: "Invite Your Team & Staff",
+    number: "2",
+    descripion:
+      "Easily invite coaches, players, and parents to join your club's private space. They'll get instant access to all communications and schedules.",
+  },
+  {
+    title: "Instant Team Updates",
+    number: "3",
+    descripion:
+      "Receive instant updates and send messages to keep everyone informed and perfectly coordinated, on and off the pitch.",
+  },
+];
 
 export default function HowItWorks() {
   return (
@@ -11,6 +35,32 @@ export default function HowItWorks() {
           Works ?
         </span>
       </h2>
+      <p className="text-white font-montserrat text-center text-[14px] mt-4 relative">
+        Discover how our intuitive platform simplifies every aspect of managing
+        your amateur football club, from communication <span>to game day.</span>
+        <Image
+          className="absolute bottom-[-44px] right-16 "
+          src={"/line.svg"}
+          alt="Line"
+          width={120}
+          height={120}
+        />
+      </p>
+      {stepCards.map((card, index) => (
+        <Card className="mt-8 relative overflow-hidden" key={index}>
+          <div className="text-white flex justify-between font-bold font-montserrat">
+            <h3>{card.title}</h3>
+            <span>{card.number}</span>
+          </div>
+          <p className="text-white font-light font-montserrat text-sm mt-2">
+            {card.descripion}
+          </p>
+          {index === 0 && <StepCardContentOne />}
+          {index === 1 && <StepCardContentTwo />}
+          {index === 2 && <StepCardContentThree />}
+          <div className="w-35 h-35 bottom-0 right-0 absolute bg-gradient-to-r from-[#666688] to-[#585FFF] rounded-lg blur-[120px]"></div>
+        </Card>
+      ))}
     </>
   );
 }
