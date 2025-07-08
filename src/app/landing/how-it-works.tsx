@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Card from "../ui/card";
+import StepCardContentOne from "../components/how-it-works/step-card-content-one";
+import StepCardContentTwo from "../components/how-it-works/step-card-content-two";
+import StepCardContentThree from "../components/how-it-works/step-card-content-three";
 
 const stepCards = [
   {
@@ -52,74 +55,9 @@ export default function HowItWorks() {
           <p className="text-white font-light font-montserrat text-sm mt-2">
             {card.descripion}
           </p>
-          {index === 0 && (
-            <div className="flex items-center gap-20 mt-12">
-              <Image
-                src={"/big-blur.svg"}
-                alt="Blur"
-                width={400}
-                height={400}
-                className="absolute rotate-180 left-[-180px] top-[110px] z-0"
-              />
-
-              <Image
-                src={"/gradient-arrow.svg"}
-                alt="Arrow"
-                width={80}
-                height={80}
-                className=" ml-4"
-              />
-              <div className="flex flex-col items-center shadow-card py-2 px-4 mb-4 rounded-lg bg-[#232323]/20 -rotate-10 ">
-                <h4 className="text-white font-montserrat text-xs font-bold">
-                  Welcome to ClubHive
-                </h4>
-                <Image
-                  src={"/arrow.svg"}
-                  alt="Arrow"
-                  width={30}
-                  height={30}
-                  className="rotate-220 mt-2"
-                />
-                <button className=" bg-[#181818] w-full shadow-inner-color rounded-lg py-1 bg-gradient-to-r from-[#ffffff] to-[#666688] text-transparent bg-clip-text text-[12px] font-montserrat font-bold text-lg mt-4">
-                  Get started
-                </button>
-              </div>
-            </div>
-          )}
-          {index === 1 && (
-            <div className="shadow-sm shadow-[#585BFF] rounded-xl pt-4 pb-14 mt-8 bg-[#26263B]/45 ">
-              <div className="flex items-center justify-center gap-2">
-                <Image
-                  src={"/coach-alex.svg"}
-                  alt="Blur"
-                  width={35}
-                  height={35}
-                />
-                <h4 className="text-white font-montserrat font-bold">
-                  Coach Alex
-                </h4>
-              </div>
-              <div className="flex items-center justify-center gap-2 mt-4">
-                <button className="text-white/30 shadow-inner-both p-1 px-2 rounded-xl">
-                  player name or email adress
-                </button>
-                <button className="text-white font-montserrat shadow-sm shadow-[#585BFF] p-1 bg-[#181818] rounded-lg text-sm">
-                  Add
-                </button>
-              </div>
-              <div className="flex items-center justify-center gap-2 mt-3">
-                <button className="text-white/30 shadow-inner-both p-1 px-2 rounded-xl">
-                  player name or email adress
-                </button>
-                <button className="text-white font-montserrat shadow-sm shadow-[#585BFF] p-1 bg-[#181818] rounded-lg text-sm">
-                  Add
-                </button>
-              </div>
-              <button className="absolute text-white text-[12px] font-montserrat font-bold text-lg mt-4 -rotate-6 bg-[#181818] shadow-inner-color rounded-lg py-1 px-6 right-[120px] bottom-3 ">
-                Send invitation
-              </button>
-            </div>
-          )}
+          {index === 0 && <StepCardContentOne />}
+          {index === 1 && <StepCardContentTwo />}
+          {index === 2 && <StepCardContentThree />}
           <div className="w-35 h-35 bottom-0 right-0 absolute bg-gradient-to-r from-[#666688] to-[#585FFF] rounded-lg blur-[120px]"></div>
         </Card>
       ))}
