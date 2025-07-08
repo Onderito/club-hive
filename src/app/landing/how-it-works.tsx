@@ -2,6 +2,27 @@ import React from "react";
 import Image from "next/image";
 import Card from "../ui/card";
 
+const stepCards = [
+  {
+    title: "Set Up Your Club in Minutes",
+    number: "1",
+    descripion:
+      "Quickly create your club profile, add essential details, and customize your settings to get started without delay.",
+  },
+  {
+    title: "Invite Your Team & Staff",
+    number: "2",
+    descripion:
+      "Easily invite coaches, players, and parents to join your club's private space. They'll get instant access to all communications and schedules.",
+  },
+  {
+    title: "Instant Team Updates",
+    number: "3",
+    descripion:
+      "Receive instant updates and send messages to keep everyone informed and perfectly coordinated, on and off the pitch.",
+  },
+];
+
 export default function HowItWorks() {
   return (
     <>
@@ -11,6 +32,63 @@ export default function HowItWorks() {
           Works ?
         </span>
       </h2>
+      <p className="text-white font-montserrat text-center text-[14px] mt-4 relative">
+        Discover how our intuitive platform simplifies every aspect of managing
+        your amateur football club, from communication <span>to game day.</span>
+        <Image
+          className="absolute bottom-[-44px] right-16 "
+          src={"/line.svg"}
+          alt="Line"
+          width={120}
+          height={120}
+        />
+      </p>
+      {stepCards.map((card, index) => (
+        <Card className="mt-8 relative overflow-hidden" key={index}>
+          <div className="text-white flex justify-between font-bold font-montserrat">
+            <h3>{card.title}</h3>
+            <span>{card.number}</span>
+          </div>
+          <p className="text-white font-light font-montserrat text-sm mt-2">
+            {card.descripion}
+          </p>
+          {index === 0 && (
+            <div className="flex items-center gap-20 mt-12">
+              <Image
+                src={"/big-blur.svg"}
+                alt="Blur"
+                width={400}
+                height={400}
+                className="absolute rotate-180 left-[-180px] top-[110px] z-0"
+              />
+
+              <Image
+                src={"/gradient-arrow.svg"}
+                alt="Arrow"
+                width={80}
+                height={80}
+                className=" ml-4"
+              />
+              <div className="flex flex-col items-center shadow-card py-2 px-4 mb-4 rounded-lg bg-[#232323]/20 -rotate-10 ">
+                <h4 className="text-white font-montserrat text-xs font-bold">
+                  Welcome to ClubHive
+                </h4>
+                <Image
+                  src={"/arrow.svg"}
+                  alt="Arrow"
+                  width={30}
+                  height={30}
+                  className="rotate-220 mt-2"
+                />
+                <button className=" bg-[#181818] w-full shadow-inner-color rounded-lg py-1 bg-gradient-to-r from-[#ffffff] to-[#666688] text-transparent bg-clip-text text-[12px] font-montserrat font-bold text-lg mt-4">
+                  Get started
+                </button>
+              </div>
+            </div>
+          )}
+          <div className="w-35 h-35 bottom-0 right-0 absolute bg-gradient-to-r from-[#666688] to-[#585FFF] rounded-lg blur-[120px]"></div>
+        </Card>
+      ))}
     </>
   );
 }
