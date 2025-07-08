@@ -78,7 +78,7 @@ export default function HeroSection() {
         <div className="flex flex-col gap-6 md:flex-row md:gap-8">
           {/* Card Clubs */}
           <Card size="md" className="relative overflow-hidden">
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4 relative z-50">
               {clubs.map((club) => (
                 <div key={club.name} className="flex items-center gap-3">
                   <Image
@@ -94,6 +94,7 @@ export default function HeroSection() {
                 </div>
               ))}
             </div>
+            <div className="w-full absolute h-56 z-0 top-[-70px] bg-gradient-to-r from-[#666688] to-[#585FFF] blur-[240px]"></div>
           </Card>
 
           {/* Card Dialogue */}
