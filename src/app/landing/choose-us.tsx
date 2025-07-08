@@ -55,6 +55,12 @@ export default function ChooseUs() {
           </div>
         </Card>
       ))}
+      <h3 className="text-white text-center text-[20px] font-montserrat font-bold mt-8">
+        The only platform your club needs <br />
+        <span className="bg-[linear-gradient(90deg,#D0D0D0_0%,rgba(88,91,255,0.2)_90%)] bg-clip-text text-transparent font-shantell">
+          to trust.
+        </span>
+      </h3>
     </div>
   );
 }

@@ -7,6 +7,11 @@
   font-family: Shantell Sans;
   src: url(../app/assets/ShantellSans-Light.ttf);
 }
+
+@font-face {
+  font-family: Shantell Sans;
+  src: url(../app/assets/ShantellSans-Medium.ttf);
+}
 @import "tailwindcss";
 
 :root {
