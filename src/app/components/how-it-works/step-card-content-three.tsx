@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function StepCardContentThree() {
   return (
     <>
-      <div className="border-1 border-white  rounded-lg mt-8">
-        <h4 className="text-white font-montserrat border-b border-white font-bold pb-2 p-2">
+      <div className="border-[0.1px] border-white  rounded-lg mt-8">
+        <h4 className="text-white font-montserrat border-b-[0.1px] border-white font-bold pb-2 p-2">
           Latest Alerts
         </h4>
         <div className="flex flex-col gap-4 p-2 text-white font-montserrat mt-4 mb-12">

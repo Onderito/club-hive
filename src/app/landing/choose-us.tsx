@@ -26,7 +26,7 @@ const stepCards = [
 export default function ChooseUs() {
   return (
     <>
-      <h2 className="text-white text-center text-[24px] md:text-[32px] lg:text-[42px] font-montserrat font-bold md:mt-16 ">
+      <h2 className="text-white text-center text-[24px] md:text-[32px] lg:text-[42px] xl:text-[48px] font-montserrat font-bold md:mt-16 ">
         Why choose{" "}
         <span className="bg-gradient-to-r from-[#D0D0D0] to-[#393939] text-transparent bg-clip-text">
           us ?
@@ -39,11 +39,13 @@ export default function ChooseUs() {
         width={40}
         height={40}
       />
-      <div className="flex flex-col justify-center items-center  ">
+      <div className="flex flex-col justify-center items-center xl:flex-row xl:gap-8 xl:mt-14">
         {stepCards.map((card, index) => (
           <Card
             key={index}
-            className="mt-6 py-6 pb-28 relative overflow-hidden"
+            className={`mt-6 py-6 relative overflow-hidden pb-28 ${
+              index === 1 ? "xl:top-[-40px]" : ""
+            } `}
           >
             <div className="text-white font-montserrat">
               <h3 className="font-bold text-lg md:text-xl lg:text-2xl ">
@@ -64,7 +66,7 @@ export default function ChooseUs() {
           </Card>
         ))}
       </div>
-      <h3 className="text-white text-center text-[20px] md:text-[24px] lg:text-[32px] font-montserrat font-bold mt-8 relative">
+      <h3 className="text-white text-center text-[20px] md:text-[24px] lg:text-[32px] font-montserrat font-light mt-8 relative">
         The only platform your club needs
         <span className="bg-[linear-gradient(90deg,#D0D0D0_0%,rgba(88,91,255,0.2)_90%)] bg-clip-text text-transparent font-shantell">
           {""} to trust.
@@ -74,7 +76,7 @@ export default function ChooseUs() {
           alt="three lines"
           width={40}
           height={40}
-          className=" hidden md:block md:absolute md:top-[-30px] lg:top-[-40px] md:right-12 lg:right-16 md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[80px]"
+          className=" hidden md:block md:absolute md:top-[-30px] lg:top-[-40px] xl:top-[-65px] md:right-12 lg:right-16 xl:right-68 md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[80px] xl:w-[80px] xl:h-[120px]"
         />
       </h3>
     </>

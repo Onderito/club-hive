@@ -6,12 +6,12 @@ const messages = [
   {
     name: "Coach Louis",
     avatar: "/coach-louis.svg",
-    message: "Prêt pour le match de dimanche ?",
+    message: " You guys ready for the game on Sunday?",
   },
   {
     name: "Coach Alex",
     avatar: "/coach-alex.svg",
-    message: "Oui, l’équipe est motivée !",
+    message: "Yes, we are ready ! ",
   },
 ];
 

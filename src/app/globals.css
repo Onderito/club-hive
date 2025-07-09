@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: Montserrat;
+  src: url(../app/assets/Montserrat-Light.ttf);
+}
+
+@font-face {
   font-family: Shantell Sans;
   src: url(../app/assets/ShantellSans-Light.ttf);
 }

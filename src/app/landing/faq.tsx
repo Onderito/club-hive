@@ -40,24 +40,27 @@ export default function FAQ() {
 
   return (
     <>
-      <h2 className="bg-gradient-to-r from-[#393939] to-[#D0D0D0] text-transparent bg-clip-text text-center text-[24px] md:text-[32px] lg:text-[42px] font-montserrat font-bold mt-12 md:mt-16">
+      <h2 className="bg-gradient-to-r from-[#393939] to-[#D0D0D0] text-transparent bg-clip-text text-center text-[24px] md:text-[32px] lg:text-[42px] xl:text-[48px] font-montserrat font-bold mt-12 md:mt-16 xl:mt-32">
         Frequently Asked{" "}
         <span className="bg-gradient-to-r from-[#585BFF]/20 to-[#585BFF]/11 text-white p-2 rounded-xl shadow-inner-color">
           FAQ
         </span>{" "}
         Questions
       </h2>
-      <p className="text-white font-montserrat text-center text-[14px] md:text-[16px] lg:text-[20px] mt-4">
+      <p className="text-white font-montserrat text-center text-[14px] md:text-[16px] lg:text-[20px] xl:text-[24px] mt-4">
         We've got answers. Find what you're looking for below.
       </p>
       {stepCards.map((card, index) => (
-        <div className="flex justify-center" key={index}>
-          <Card className="mt-6 md:py-6 lg:py-10 lg:max-w-2xl relative overflow-hidden">
+        <div
+          className="flex justify-center items-center xl:flex xl:flex-col"
+          key={index}
+        >
+          <Card className="mt-6 md:py-6 lg:py-10 lg:max-w-2x xl:max-w-3xl  relative overflow-hidden">
             <div
               onClick={() => toggleAnswer(index)}
               className="flex justify-between items-center relative z-10"
             >
-              <h3 className="text-white font-bold font-montserrat text-md lg:text-xl">
+              <h3 className="text-white font-bold font-montserrat text-md lg:text-xl ">
                 {card.question}
               </h3>
               <p
@@ -76,7 +79,9 @@ export default function FAQ() {
               } overflow-hidden`}
             >
               <div className="overflow-hidden">
-                <p className="text-white text-sm">{card.answer}</p>
+                <p className="text-white font-montserrat text-sm xl:text-md ">
+                  {card.answer}
+                </p>
               </div>
             </div>
             <Image
