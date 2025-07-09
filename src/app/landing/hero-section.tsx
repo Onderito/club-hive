@@ -42,7 +42,7 @@ const messages = [
 export default function HeroSection() {
   return (
     <div className="relative">
-      <h1 className="text-white text-[28px] leading-10 text-center font-montserrat font-bold">
+      <h1 className="text-white text-[28px] md:text-[40px] leading-10 md:leading-14 text-center font-montserrat font-bold">
         The platform for modern{" "}
         <span className="font-shantell bg-[var(--color-secondary)]/20 px-1 rounded-lg shadow-inner-both">
           amateur
@@ -54,9 +54,9 @@ export default function HeroSection() {
         alt="Group"
         width={40}
         height={40}
-        className="absolute top-[-40px] right-0"
+        className="absolute top-[-30px] right-0 md:right-14 md:w-[50px] md:h-[50px]"
       />
-      <p className="text-white text-center text-[16px] mt-4 font-montserrat">
+      <p className="text-white text-center text-[16px] md:text-[18px] mt-4 font-montserrat">
         The all-in-one platform to manage, connect, and grow your amateur
         football club.
       </p>
@@ -64,18 +64,18 @@ export default function HeroSection() {
         <Button variant="primary" size="lg" children="Get Started For Free" />
         <Button variant="secondary" size="lg" children="How It Works" />
         <Image
-          className="absolute right-10 bottom-[-80px] rotate-60"
+          className="absolute right-10 md:right-18 bottom-[-80px] md:bottom-[-65px] rotate-60 md:rotate-0"
           src={"/arrow.svg"}
           alt="Arrow"
           width={40}
           height={40}
         />
       </div>
-      <button className="bg-[var(--color-primary)] font-shantell text-sm text-white shadow-inner-dark p-2 rounded-lg absolute top-[-45px] -rotate-3">
+      <button className="bg-[var(--color-primary)] font-shantell text-sm text-white shadow-inner-dark p-2 rounded-lg absolute top-[-38px] md:left-20 -rotate-3">
         Your club. Your community. Your rules.
       </button>
-      <section className="mt-28">
-        <div className="flex flex-col gap-6 md:flex-row md:gap-8">
+      <section className="mt-28 ">
+        <div className="flex flex-col gap-6 md:gap-8 md:grid md:grid-cols-2">
           {/* Card Clubs */}
           <Card size="md" className="relative overflow-hidden">
             <div className="flex flex-col space-y-4 relative z-50">

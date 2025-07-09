@@ -29,17 +29,17 @@ const stepCards = [
 export default function HowItWorks() {
   return (
     <>
-      <h2 className="text-white text-center text-[24px] font-montserrat font-bold mt-12 ">
+      <h2 className="text-white text-center text-[24px] md:text-[32px] font-montserrat font-bold mt-12 md:mt-16 ">
         How It{" "}
         <span className="bg-gradient-to-r from-[#D0D0D0] to-[#393939] text-transparent bg-clip-text">
           Works ?
         </span>
       </h2>
-      <p className="text-white font-montserrat text-center text-[14px] mt-4 relative">
+      <p className="text-white font-montserrat text-center text-[14px] md:text-[16px] mt-4 relative">
         Discover how our intuitive platform simplifies every aspect of managing
         your amateur football club, from communication <span>to game day.</span>
         <Image
-          className="absolute bottom-[-44px] right-16 "
+          className="absolute bottom-[-44px] right-16 md:right-22 "
           src={"/line.svg"}
           alt="Line"
           width={120}
@@ -47,19 +47,21 @@ export default function HowItWorks() {
         />
       </p>
       {stepCards.map((card, index) => (
-        <Card className="mt-8 relative overflow-hidden" key={index}>
-          <div className="text-white flex justify-between font-bold font-montserrat">
-            <h3>{card.title}</h3>
-            <span>{card.number}</span>
-          </div>
-          <p className="text-white font-light font-montserrat text-sm mt-2">
-            {card.descripion}
-          </p>
-          {index === 0 && <StepCardContentOne />}
-          {index === 1 && <StepCardContentTwo />}
-          {index === 2 && <StepCardContentThree />}
-          <div className="w-35 h-35 bottom-0 right-0 absolute bg-gradient-to-r from-[#666688] to-[#585FFF] rounded-lg blur-[120px]"></div>
-        </Card>
+        <div className="flex justify-center" key={index}>
+          <Card className="mt-8 relative overflow-hidden">
+            <div className="text-white flex justify-between font-bold font-montserrat">
+              <h3 className="md:text-xl">{card.title}</h3>
+              <span>{card.number}</span>
+            </div>
+            <p className="text-white font-light font-montserrat text-sm mt-2">
+              {card.descripion}
+            </p>
+            {index === 0 && <StepCardContentOne />}
+            {index === 1 && <StepCardContentTwo />}
+            {index === 2 && <StepCardContentThree />}
+            <div className="w-35 h-35 bottom-0 right-0 absolute bg-gradient-to-r from-[#666688] to-[#585FFF] rounded-lg blur-[120px]"></div>
+          </Card>
+        </div>
       ))}
     </>
   );

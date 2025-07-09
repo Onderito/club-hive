@@ -16,7 +16,7 @@ export default function StepCardContentThree() {
             Training cancelled due to rain
           </p>
         </div>
-        <button className="absolute text-white text-[12px] font-montserrat font-bold text-lg mt-4 rotate-6 bg-[#181818] shadow-inner-color rounded-lg py-1 px-6 left-0 bottom-3 ">
+        <button className="absolute text-white text-[12px] md:text-[14px] font-montserrat font-bold text-lg mt-4 rotate-6 bg-[#181818] shadow-inner-color rounded-lg py-1 md:py-2 px-6 left-0 bottom-3 ">
           Hi Coach Alex ! How are you ?
         </button>
       </div>

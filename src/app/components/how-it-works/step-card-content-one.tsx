@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function StepCardContentOne() {
   return (
     <>
-      <div className="flex items-center gap-20 mt-12">
+      <div className="flex items-center gap-20 md:gap-32 mt-12">
         <Image
           src={"/big-blur.svg"}
           alt="Blur"

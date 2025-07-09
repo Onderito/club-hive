@@ -26,7 +26,7 @@ const stepCards = [
 export default function ChooseUs() {
   return (
     <div>
-      <h2 className="text-white text-center text-[24px] font-montserrat font-bold">
+      <h2 className="text-white text-center text-[24px] md:text-[32px] font-montserrat font-bold md:mt-16">
         Why choose{" "}
         <span className="bg-gradient-to-r from-[#D0D0D0] to-[#393939] text-transparent bg-clip-text">
           us ?
@@ -40,26 +40,35 @@ export default function ChooseUs() {
         height={40}
       />
       {stepCards.map((card, index) => (
-        <Card className="mt-6 py-6 pb-28 relative overflow-hidden" key={index}>
-          <div className="text-white font-montserrat">
-            <h3 className="font-bold text-lg">{card.title}</h3>
-            <p className="font-light text-sm mt-2">{card.description}</p>
-            <Image
-              src={`/${card.image}`}
-              alt={card.title}
-              width={170}
-              height={170}
-              className="mt-4 absolute bottom-[-30px] right-[-35px] "
-            />
-            <div className="w-50 h-50 absolute bg-gradient-to-r from-[#666688] to-[#585FFF] rounded-lg blur-[120px]"></div>
-          </div>
-        </Card>
+        <div className="flex justify-center" key={index}>
+          <Card className="mt-6 py-6 pb-28 relative overflow-hidden">
+            <div className="text-white font-montserrat">
+              <h3 className="font-bold text-lg md:text-xl ">{card.title}</h3>
+              <p className="font-light text-sm  mt-2">{card.description}</p>
+              <Image
+                src={`/${card.image}`}
+                alt={card.title}
+                width={170}
+                height={170}
+                className="mt-4 absolute bottom-[-30px] right-[-35px]"
+              />
+              <div className="w-50 h-50 absolute bg-gradient-to-r from-[#666688] to-[#585FFF] rounded-lg blur-[120px]"></div>
+            </div>
+          </Card>
+        </div>
       ))}
-      <h3 className="text-white text-center text-[20px] font-montserrat font-bold mt-8">
-        The only platform your club needs <br />
+      <h3 className="text-white text-center text-[20px] md:text-[24px] font-montserrat font-bold mt-8 relative">
+        The only platform your club needs
         <span className="bg-[linear-gradient(90deg,#D0D0D0_0%,rgba(88,91,255,0.2)_90%)] bg-clip-text text-transparent font-shantell">
-          to trust.
+          {""} to trust.
         </span>
+        <Image
+          src={"/three-lines.svg"}
+          alt="three lines"
+          width={40}
+          height={40}
+          className=" hidden md:block md:absolute md:top-[-30px] md:right-12 md:w-[50px] md:h-[50px]"
+        />
       </h3>
     </div>
   );

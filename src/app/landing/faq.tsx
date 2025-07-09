@@ -6,22 +6,22 @@ import Card from "../ui/card";
 
 const stepCards = [
   {
-    question: "what is the purpose of this platform ?",
+    question: "What is the purpose of this platform ?",
     answer:
       "This platform is designed to streamline communication and management for amateur football clubs, making it easier for coaches, players, and parents to stay connected and organized.",
   },
   {
-    question: "how do I create a club profile ?",
+    question: "How do I create a club profile ?",
     answer:
       "Creating a club profile is simple. Just click on the 'Create Club' button, fill in the required details, and customize your settings to get started.",
   },
   {
-    question: "can I invite team members ?",
+    question: "Can I invite team members ?",
     answer:
       "Yes, you can easily invite coaches, players, and parents to join your club's private space by sending them an invitation link.",
   },
   {
-    question: "how do I send updates to my team ?",
+    question: "How do I send updates to my team ?",
     answer:
       "You can send instant updates and messages through the platform's communication features, ensuring everyone stays informed and coordinated.",
   },
@@ -40,53 +40,54 @@ export default function FAQ() {
 
   return (
     <>
-      <h2 className="bg-gradient-to-r from-[#393939] to-[#D0D0D0] text-transparent bg-clip-text text-center text-[24px] font-montserrat font-bold mt-12">
+      <h2 className="bg-gradient-to-r from-[#393939] to-[#D0D0D0] text-transparent bg-clip-text text-center text-[24px] md:text-[32px] font-montserrat font-bold mt-12 md:mt-16">
         Frequently Asked{" "}
         <span className="bg-gradient-to-r from-[#585BFF]/20 to-[#585BFF]/11 text-white p-2 rounded-xl shadow-inner-color">
           FAQ
         </span>{" "}
         Questions
       </h2>
-      <p className="text-white font-montserrat text-center text-[14px] mt-4">
+      <p className="text-white font-montserrat text-center text-[14px] md:text-[16px] mt-4">
         We've got answers. Find what you're looking for below.
       </p>
       {stepCards.map((card, index) => (
-        <Card className="mt-6 relative overflow-hidden" key={index}>
-          <div
-            onClick={() => toggleAnswer(index)}
-            className="flex justify-between items-center relative z-10"
-          >
-            <h3 className="text-white font-bold font-montserrat text-md">
-              {card.question}
-            </h3>
-            <p
-              className={`text-white transition-transform duration-700 ${
-                activeIndex === index ? "rotate-45" : "rotate-0"
-              }`}
+        <div className="flex justify-center" key={index}>
+          <Card className="mt-6 md:py-6 relative overflow-hidden">
+            <div
+              onClick={() => toggleAnswer(index)}
+              className="flex justify-between items-center relative z-10"
             >
-              +
-            </p>
-          </div>
-          <div
-            className={`grid transition-all duration-500 ease-in-out ${
-              activeIndex === index
-                ? "grid-rows-[1fr] opacity-100 scale-100 mt-4"
-                : "grid-rows-[0fr] opacity-0 scale-95"
-            } overflow-hidden`}
-          >
-            <div className="overflow-hidden">
-              <p className="text-white text-sm">{card.answer}</p>
+              <h3 className="text-white font-bold font-montserrat text-md">
+                {card.question}
+              </h3>
+              <p
+                className={`text-white transition-transform duration-700 ${
+                  activeIndex === index ? "rotate-45" : "rotate-0"
+                }`}
+              >
+                +
+              </p>
             </div>
-          </div>
-
-          <Image
-            src={"/big-blur.svg"}
-            alt="Blur"
-            width={120}
-            height={120}
-            className="absolute right-[-60px] top-[-30px] z-0"
-          />
-        </Card>
+            <div
+              className={`grid transition-all duration-500 ease-in-out ${
+                activeIndex === index
+                  ? "grid-rows-[1fr] opacity-100 scale-100 mt-4"
+                  : "grid-rows-[0fr] opacity-0 scale-95"
+              } overflow-hidden`}
+            >
+              <div className="overflow-hidden">
+                <p className="text-white text-sm">{card.answer}</p>
+              </div>
+            </div>
+            <Image
+              src={"/big-blur.svg"}
+              alt="Blur"
+              width={120}
+              height={120}
+              className="absolute right-[-60px] top-[-30px] md:top-[-55px] md:right-[-140px] md: z-0 md:w-60 md:h-60"
+            />
+          </Card>
+        </div>
       ))}
     </>
   );

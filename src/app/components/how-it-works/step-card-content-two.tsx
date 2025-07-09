@@ -25,7 +25,7 @@ export default function StepCardContentTwo() {
             Add
           </button>
         </div>
-        <button className="absolute text-white text-[12px] font-montserrat font-bold text-lg mt-4 -rotate-6 bg-[#181818] shadow-inner-color rounded-lg py-1 px-6 right-[120px] bottom-3 ">
+        <button className="absolute text-white text-[12px] md:text-[14px] font-montserrat font-bold text-lg mt-4 -rotate-6 bg-[#181818] shadow-inner-color rounded-lg py-1 px-6 right-[120px] bottom-3 ">
           Send invitation
         </button>
       </div>
