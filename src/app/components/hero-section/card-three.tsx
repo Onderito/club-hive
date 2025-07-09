@@ -7,7 +7,7 @@ export default function CardThree() {
     <>
       <Card
         size="md"
-        className="flex items-center justify-center py-10 relative overflow-hidden"
+        className="flex items-center justify-center py-10 relative overflow-hidden xl:-top-50 xl:-right-20 xl:-rotate-3"
       >
         <div className="font-montserrat space-y-2 text-lg">
           <p className="text-white text-left bg-[var(--color-secondary)]/20 p-3 rounded-2xl shadow-inner-both">

@@ -5,7 +5,7 @@ import Card from "@/app/ui/card";
 export default function CardFour() {
   return (
     <>
-      <Card className="relative">
+      <Card className="relative xl:-top-50 xl:-left-20 xl:rotate-3">
         <div className="flex flex-col justify-center p-4">
           <h2 className="text-white text-center font-montserrat font-bold text-[20px]">
             Rapid FC vs Mérignac

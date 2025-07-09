@@ -28,7 +28,10 @@ const clubs = [
 export default function CardOne() {
   return (
     <>
-      <Card size="md" className="relative  overflow-hidden">
+      <Card
+        size="md"
+        className="relative xl:rotate-3 xl:-left-10 overflow-hidden"
+      >
         <div className="flex flex-col space-y-4 relative z-50">
           {clubs.map((club) => (
             <div key={club.name} className="flex items-center gap-3">

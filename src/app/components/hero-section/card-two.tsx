@@ -18,7 +18,10 @@ const messages = [
 export default function CardTwo() {
   return (
     <>
-      <Card size="md" className="py-10 relative overflow-hidden">
+      <Card
+        size="md"
+        className="py-10 relative xl:-rotate-3 xl:-right-10 overflow-hidden"
+      >
         <div className="flex flex-col space-y-14 relative z-50">
           {messages.map((coach) => (
             <div key={coach.name} className="flex items-start gap-3">
