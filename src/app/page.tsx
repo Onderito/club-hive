@@ -2,6 +2,7 @@ import HeroSection from "./landing/hero-section";
 import ChooseUs from "./landing/choose-us";
 import HowItWorks from "./landing/how-it-works";
 import FAQ from "./landing/faq";
+import Footer from "./layout/footer";
 
 export default function Home() {
   return (
@@ -19,6 +20,9 @@ export default function Home() {
       </section>
       <section className="container mx-auto px-2 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
         <FAQ />
+      </section>
+      <section className="container mx-auto px-2 sm:px-8 md:px-12 lg:px-16 xl:px-16 2xl:px-24">
+        <Footer />
       </section>
     </>
   );
