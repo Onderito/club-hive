@@ -26,11 +26,12 @@ const stepCards = [
 export default function ChooseUs() {
   return (
     <>
-      <h2 className="text-white text-center text-[24px] md:text-[32px] lg:text-[42px] xl:text-[48px] font-montserrat font-bold md:mt-16 ">
+      <h2 className="text-white text-center text-[24px] md:text-[32px] lg:text-[42px] xl:text-[48px] font-montserrat font-bold md:mt-16 relative">
         Why choose{" "}
         <span className="bg-gradient-to-r from-[#D0D0D0] to-[#393939] text-transparent bg-clip-text">
           us ?
         </span>
+        <div className="hidden xl:block absolute xl:w-[372px] xl:h-[324px] bg-gradient-to-r from-[#666688] to-[#616161] blur-[400px] right-[-300px] "></div>
       </h2>
       <Image
         className="-rotate-120 items-center mx-auto mt-4 lg:w-[50px] lg:h-[80px]"
