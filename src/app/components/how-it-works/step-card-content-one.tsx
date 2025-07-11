@@ -14,7 +14,7 @@ export default function StepCardContentOne() {
         />
 
         <Image
-          src={"/gradient-arrow.svg"}
+          src={"/arrow-dash.svg"}
           alt="Arrow"
           width={80}
           height={80}

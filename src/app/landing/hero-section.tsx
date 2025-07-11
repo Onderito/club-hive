@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Button from "@/app/ui/button";
@@ -7,6 +9,11 @@ import CardThree from "../components/hero-section/card-three";
 import CardFour from "../components/hero-section/card-four";
 
 export default function HeroSection() {
+  const handleClick = () => {
+    document.getElementById("how-it-works")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="relative ">
       <h1 className="text-white text-[28px] md:text-[40px] lg:text-[54px] xl:text-[80px] leading-10 md:leading-14 lg:leading-18 xl:leading-26 text-center font-montserrat font-bold">
@@ -28,18 +35,18 @@ export default function HeroSection() {
         football club.
       </p>
       <div className="flex justify-center items-center gap-4 mt-6 xl:mt-8 relative">
+        <Button className="cursor-pointer" variant="primary" size="lg">
+          Get Started For Free
+        </Button>
+
         <Button
-          className="cursor-pointer"
-          variant="primary"
-          size="lg"
-          children="Get Started For Free"
-        />
-        <Button
+          onClick={handleClick}
           className="cursor-pointer"
           variant="secondary"
           size="lg"
-          children="How It Works"
-        />
+        >
+          How It Works ?
+        </Button>
         <Image
           className="absolute right-10 md:right-18 bottom-[-80px] md:bottom-[-65px] lg:right-36 xl:right-92 rotate-60 md:rotate-0"
           src={"/arrow.svg"}
