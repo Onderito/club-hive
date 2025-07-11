@@ -55,7 +55,7 @@ export default function FAQ() {
         />
       </h2>
       <p className="text-white font-montserrat text-center text-[14px] md:text-[16px] lg:text-[20px] xl:text-[24px] mt-4">
-        We've got answers. Find what you're looking for below.
+        We&apos;ve got answers. Find what you&apos;re looking for below.
       </p>
       {stepCards.map((card, index) => (
         <div
